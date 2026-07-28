@@ -127,16 +127,20 @@
     read it. Sync can be switched off, and the app works fully without it.</p>
 
     <h2>What leaves your device</h2>
-    <p>One thing, and only from one screen.</p>
+    <p>Place names, and nothing else. Only from the Map screen.</p>
     <p>The <strong>Map</strong> tab needs to turn a place name into coordinates in order to place a
     pin. When you first open the Map, the app sends the <strong>city and country strings</strong>
     you have recorded — for example <code>"Zürich, Switzerland"</code> — to <strong>Apple's geocoding
-    service</strong>.</p>
+    service</strong>. Drawing the map itself also loads map tiles from Apple, the same way
+    every app that shows a map does.</p>
     <p>What is sent: the place name only.<br />
     What is never sent: names, notes, facts, contact details, birthdays, your search
     queries, or any identifier for you or for any contact.</p>
     <p>Each place is looked up once and the result is cached on your device, so the same
-    city is never sent twice. If you never open the Map tab, nothing is ever sent.</p>
+    city is never sent twice. If you never open the Map tab, no place name is ever sent.</p>
+    <p>Turning on iCloud sync also moves your data over the network, but only between
+    your own devices and your own private iCloud database — see above. It does not
+    pass through anything belonging to the developer.</p>
 
     <h2>Artificial intelligence</h2>
     <p>NetGlow reads your notes and searches them using models that run <strong>entirely on
@@ -168,10 +172,11 @@
     straight away.</p>
 
     <h2>Diagnostics</h2>
-    <p>NetGlow keeps crash and performance diagnostics <strong>on your device</strong> so problems
-    can be investigated. These are never transmitted automatically. If you choose to
-    send a problem report, the app shows you the exact contents before anything is
-    sent, and nothing leaves without you tapping send.</p>
+    <p>When NetGlow reads a note, it keeps a short record of what it did <strong>on your
+    device</strong>, so that a note which came out wrong can be looked into. You can read
+    these yourself under <strong>Settings → Privacy → Diagnostics</strong>.</p>
+    <p>There is no way to send them anywhere. The app has no reporting feature, and
+    nothing about your use of it is transmitted to the developer or to anyone else.</p>
 
     <h2>Children</h2>
     <p>NetGlow is not directed at children and collects nothing from anyone.</p>
