@@ -56,6 +56,66 @@
     font-weight: 600;
   }
   a.link:hover { opacity: 0.8; }
+  .links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+  }
+  .contact {
+    text-align: left;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    padding: 1.5rem 1.75rem;
+  }
+  .contact h2 {
+    font-size: 1rem;
+    margin: 0 0 0.35rem;
+  }
+  .contact p.hint {
+    color: var(--mid);
+    font-size: 0.85rem;
+    margin: 0 0 1rem;
+  }
+  .contact label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--mid);
+    margin: 0.75rem 0 0.25rem;
+  }
+  .contact input,
+  .contact textarea {
+    width: 100%;
+    font: inherit;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 0.6rem 0.7rem;
+    resize: vertical;
+  }
+  .contact textarea { min-height: 5rem; }
+  .contact button {
+    margin-top: 1rem;
+    width: 100%;
+    font: inherit;
+    font-weight: 600;
+    color: var(--paper);
+    background: var(--accent);
+    border: none;
+    border-radius: 8px;
+    padding: 0.65rem 0.7rem;
+    cursor: pointer;
+  }
+  .contact button:hover { opacity: 0.9; }
+  .contact .direct {
+    display: block;
+    margin-top: 0.9rem;
+    font-size: 0.8rem;
+    color: var(--mid);
+    text-align: center;
+  }
   footer {
     margin-top: 2.5rem;
     color: var(--mid);
@@ -67,8 +127,36 @@
 <main>
   <h1>NetGlow</h1>
   <p class="tagline">A private notebook about the people you meet. Everything stays on your device.</p>
-  <p><a class="link" href="/privacy">Privacy Policy →</a></p>
+  <p class="links"><a class="link" href="/privacy">Privacy Policy →</a></p>
+
+  <section class="contact" id="contact">
+    <h2>Contact</h2>
+    <p class="hint">Questions, feedback, or a problem to report — this opens your email app with the message filled in.</p>
+    <form id="contact-form">
+      <label for="c-name">Name</label>
+      <input id="c-name" type="text" autocomplete="name" />
+
+      <label for="c-message">Message</label>
+      <textarea id="c-message" required></textarea>
+
+      <button type="submit">Send email</button>
+    </form>
+    <a class="direct" href="mailto:netglowapp@gmail.com">or email netglowapp@gmail.com directly</a>
+  </section>
+
   <footer>&copy; 2026 NetGlow</footer>
 </main>
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = document.getElementById('c-name').value.trim();
+    var message = document.getElementById('c-message').value.trim();
+    var subject = 'NetGlow contact' + (name ? ' — ' + name : '');
+    var body = message + (name ? '\n\n— ' + name : '');
+    window.location.href = 'mailto:netglowapp@gmail.com'
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(body);
+  });
+</script>
 </body>
 </html>
