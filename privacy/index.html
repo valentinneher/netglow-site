@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy — NetGlow</title>
+<meta name="description" content="NetGlow privacy policy. NetGlow stores everything on your device — there is no account, no analytics, and no tracking." />
+<style>
+  :root {
+    --ink: #291F18;
+    --mid: #6C6158;
+    --paper: #F8F5EE;
+    --card: #FDFCF8;
+    --accent: #943D00;
+    --rule: rgba(41, 31, 24, 0.12);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #F2EDE4;
+      --mid: #B8AC9F;
+      --paper: #17110C;
+      --card: #1E1710;
+      --accent: #EDB417;
+      --rule: rgba(242, 237, 228, 0.14);
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+  }
+  header.page-header {
+    margin-bottom: 2rem;
+  }
+  a { color: var(--accent); }
+  a:hover { opacity: 0.8; }
+  .home-link {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: var(--mid);
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+  }
+  .home-link:hover { color: var(--accent); }
+  h1 {
+    font-size: 1.75rem;
+    margin: 0 0 0.25rem;
+    letter-spacing: -0.01em;
+  }
+  .updated {
+    color: var(--mid);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    padding: 1.75rem 2rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+    margin: 2rem 0 0.75rem;
+  }
+  h2:first-child { margin-top: 0; }
+  p { margin: 0 0 1rem; color: var(--ink); }
+  strong { color: var(--ink); }
+  ul { margin: 0 0 1rem; padding-left: 1.25rem; }
+  li { margin-bottom: 0.4rem; }
+  code {
+    background: var(--rule);
+    border-radius: 4px;
+    padding: 0.1em 0.35em;
+    font-size: 0.9em;
+  }
+  hr {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 1.5rem 0;
+  }
+  footer {
+    margin-top: 2.5rem;
+    color: var(--mid);
+    font-size: 0.85rem;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<main>
+  <a class="home-link" href="/">&larr; NetGlow</a>
+  <header class="page-header">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: 28 July 2026</p>
+  </header>
+
+  <div class="card">
+    <p>NetGlow is a private notebook about the people you meet. It is built so that the
+    notes you write stay on your device and nowhere else.</p>
+
+    <p>This policy is short because there is very little to describe. Guideline 5.1.1(i)
+    requires it to be published at a public URL and reachable from inside the app,
+    so it is both.</p>
+
+    <hr />
+
+    <h2>What NetGlow collects</h2>
+    <p><strong>Nothing.</strong> There is no account, no sign-up, no login, no analytics, no
+    advertising, no tracking, and no third-party SDK that reports anything about you
+    or your use of the app. NetGlow's developer cannot see your contacts, your notes,
+    or how you use the app.</p>
+
+    <h2>Where your data lives</h2>
+    <p>Everything you write — notes, contacts, facts, employment, birthdays, contact
+    details — is stored in a database inside NetGlow's own container on your device.</p>
+    <p>If you turn on iCloud sync, that data also syncs through <strong>your own private
+    iCloud database</strong>, using Apple's CloudKit. This is your personal iCloud storage,
+    tied to your Apple Account. The developer has no access to it and no ability to
+    read it. Sync can be switched off, and the app works fully without it.</p>
+
+    <h2>What leaves your device</h2>
+    <p>One thing, and only from one screen.</p>
+    <p>The <strong>Map</strong> tab needs to turn a place name into coordinates in order to place a
+    pin. When you first open the Map, the app sends the <strong>city and country strings</strong>
+    you have recorded — for example <code>"Zürich, Switzerland"</code> — to <strong>Apple's geocoding
+    service</strong>.</p>
+    <p>What is sent: the place name only.<br />
+    What is never sent: names, notes, facts, contact details, birthdays, your search
+    queries, or any identifier for you or for any contact.</p>
+    <p>Each place is looked up once and the result is cached on your device, so the same
+    city is never sent twice. If you never open the Map tab, nothing is ever sent.</p>
+
+    <h2>Artificial intelligence</h2>
+    <p>NetGlow reads your notes and searches them using models that run <strong>entirely on
+    your device</strong>:</p>
+    <ul>
+      <li><strong>Apple's Foundation Models framework</strong> turns a note into structured facts. This
+      is Apple's on-device model. Your notes are not sent to Apple, to the developer,
+      or to any third party, and are not used to train anything.</li>
+      <li><strong>A text-embedding model bundled inside the app</strong> powers search. It also runs
+      entirely on device.</li>
+    </ul>
+    <p>Neither requires a network connection. No third-party AI service is involved, so
+    there is nothing here that requires your permission to share.</p>
+
+    <h2>Location</h2>
+    <p>If you allow it, the Map tab shows your position on the map. That position is
+    used only to draw the blue dot, is never stored, and never leaves the device.
+    Declining permission only removes the dot; the rest of the Map works normally.</p>
+
+    <h2>Keeping and deleting your data</h2>
+    <p>Your data is kept until you delete it. Deleting a contact removes their details
+    immediately and permanently; the notes you wrote are kept and stay searchable,
+    because they are your words rather than derived data.</p>
+    <p>Deleting the app removes everything stored on the device. If iCloud sync was on,
+    you can additionally remove the app's data in <strong>Settings → your name → iCloud →
+    Manage Account Storage</strong>.</p>
+    <p>There is no account, so there is no consent to withdraw and no data-deletion
+    request to make of anyone — deletion is entirely in your hands and takes effect
+    straight away.</p>
+
+    <h2>Diagnostics</h2>
+    <p>NetGlow keeps crash and performance diagnostics <strong>on your device</strong> so problems
+    can be investigated. These are never transmitted automatically. If you choose to
+    send a problem report, the app shows you the exact contents before anything is
+    sent, and nothing leaves without you tapping send.</p>
+
+    <h2>Children</h2>
+    <p>NetGlow is not directed at children and collects nothing from anyone.</p>
+
+    <h2>Changes</h2>
+    <p>Any material change to this policy will be reflected here and in the app, with an
+    updated date.</p>
+
+    <h2>Contact</h2>
+    <p><a href="mailto:privacy@netglow.com">privacy@netglow.com</a></p>
+  </div>
+
+  <footer>&copy; 2026 NetGlow</footer>
+</main>
+</body>
+</html>
