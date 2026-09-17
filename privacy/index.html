@@ -99,7 +99,7 @@
   <a class="home-link" href="../">&larr; NetGlow</a>
   <header class="page-header">
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: 28 July 2026</p>
+    <p class="updated">Last updated: 17 September 2026</p>
   </header>
 
   <div class="card">
@@ -127,28 +127,55 @@
     read it. Sync can be switched off, and the app works fully without it.</p>
 
     <h2>What leaves your device</h2>
-    <p>Place names, and nothing else. Only from the Map screen.</p>
-    <p>The <strong>Map</strong> tab needs to turn a place name into coordinates in order to place a
-    pin. When you first open the Map, the app sends the <strong>city and country strings</strong>
-    you have recorded — for example <code>"Zürich, Switzerland"</code> — to <strong>Apple's geocoding
-    service</strong>. Drawing the map itself also loads map tiles from Apple, the same way
-    every app that shows a map does.</p>
-    <p>What is sent: the place name only.<br />
-    What is never sent: names, notes, facts, contact details, birthdays, your search
+    <p>Your own iCloud sync, and nothing else.</p>
+    <p>Earlier versions had one exception: a Map screen sent a city name to Apple's
+    geocoding service to place a pin. That screen has been removed, and with it the
+    last thing the app sent anywhere.</p>
+    <p>What is never sent: names, notes, facts, contact details, birthdays, your search
     queries, or any identifier for you or for any contact.</p>
-    <p>Each place is looked up once and the result is cached on your device, so the same
-    city is never sent twice. If you never open the Map tab, no place name is ever sent.</p>
-    <p>Turning on iCloud sync also moves your data over the network, but only between
-    your own devices and your own private iCloud database — see above. It does not
-    pass through anything belonging to the developer.</p>
+    <p>Turning on iCloud sync moves your data over the network, but only between your
+    own devices and your own private iCloud database — see above. It does not pass
+    through anything belonging to the developer.</p>
+
+    <h2>Dictation</h2>
+    <p>Dictating a note uses Apple's on-device speech models — the same ones behind the
+    keyboard's microphone key — through the Speech framework's <code>SpeechAnalyzer</code>. The
+    microphone is active only while you are dictating and the transcription happens
+    on this iPhone.</p>
+    <p>What is never done: the audio is not recorded, not written to disk, and not sent
+    to NetGlow, to Apple, or to anyone else.</p>
+    <p>The first time you use it, iOS may need to fetch Apple's speech model for your
+    language. NetGlow asks before that happens and tells you what it is. The
+    download comes from Apple and carries nothing of yours — no notes, no names, no
+    audio, and no identifier for you. If you decline, dictation simply stays off and
+    the rest of the app is unaffected.</p>
+
+    <h2>The iPhone's own search (Spotlight)</h2>
+    <p>With <strong>Settings → Find people in Spotlight</strong> switched on, NetGlow adds the
+    people you know to the iPhone's search index: their name, and a line saying what
+    they do and where — no more than the phone's own Contacts app publishes about
+    the same person.</p>
+    <p><strong>Your notes are never added.</strong> The index lives on this device, is not synced
+    between devices, and is not sent to Apple. Turning the switch off removes
+    everything NetGlow put there.</p>
+
+    <h2>Importing from your contacts</h2>
+    <p>NetGlow does not request access to your contacts and cannot read your address
+    book. Importing opens the iPhone's own contact picker, which hands the app only
+    the people you pick, one selection at a time.</p>
+    <p>Imported people are <strong>copied</strong>, not linked: editing someone in NetGlow does not
+    change their card in the Contacts app, and NetGlow never writes anything back.</p>
 
     <h2>Artificial intelligence</h2>
     <p>NetGlow reads your notes and searches them using models that run <strong>entirely on
     your device</strong>:</p>
     <ul>
-      <li><strong>Apple's Foundation Models framework</strong> turns a note into structured facts. This
-      is Apple's on-device model. Your notes are not sent to Apple, to the developer,
-      or to any third party, and are not used to train anything.</li>
+      <li><strong>Apple's Foundation Models framework</strong> turns a note into structured facts, and
+      writes the one-sentence answer above your search results. This is Apple's
+      on-device model. Your notes are not sent to Apple, to the developer, or to any
+      third party, and are not used to train anything. The answer is written from
+      the notes already on your screen, is never stored, and is gone when you close
+      the search.</li>
       <li><strong>A text-embedding model bundled inside the app</strong> powers search. It also runs
       entirely on device.</li>
     </ul>
@@ -156,9 +183,8 @@
     there is nothing here that requires your permission to share.</p>
 
     <h2>Location</h2>
-    <p>If you allow it, the Map tab shows your position on the map. That position is
-    used only to draw the blue dot, is never stored, and never leaves the device.
-    Declining permission only removes the dot; the rest of the Map works normally.</p>
+    <p>NetGlow does not ask for your location and cannot read it. The app no longer
+    requests location permission at all.</p>
 
     <h2>Keeping and deleting your data</h2>
     <p>Your data is kept until you delete it. Deleting a contact removes their details
@@ -175,8 +201,20 @@
     <p>When NetGlow reads a note, it keeps a short record of what it did <strong>on your
     device</strong>, so that a note which came out wrong can be looked into. You can read
     these yourself under <strong>Settings → Privacy → Diagnostics</strong>.</p>
-    <p>There is no way to send them anywhere. The app has no reporting feature, and
-    nothing about your use of it is transmitted to the developer or to anyone else.</p>
+    <p>There is no way to send them anywhere, and nothing about your use of the app is
+    transmitted to the developer or to anyone else.</p>
+
+    <h2>Feedback</h2>
+    <p>You can send feedback by shaking your iPhone in NetGlow, or from <strong>Settings →
+    Send Feedback</strong>. NetGlow then prepares an email to netglowapp@gmail.com and opens
+    it in your own Mail, where you read all of it and decide whether to send it. The
+    app sends nothing itself.</p>
+    <p>The email contains what you write, NetGlow's version, your iOS version and iPhone
+    model, your language, and whether Apple Intelligence and iCloud sync are on. It
+    contains a screenshot of the screen you were on <strong>only if you choose to attach
+    one</strong> — it is off unless you turn it on, because the screen may show people's
+    names and your notes. The developer uses feedback emails only to answer you and
+    to improve NetGlow, and deletes them on request.</p>
 
     <h2>Children</h2>
     <p>NetGlow is not directed at children and collects nothing from anyone.</p>
